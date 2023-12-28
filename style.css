@@ -1,3 +1,19 @@
-html{
+html, body{
     background-color: #F28118;
+    height: 100svh;
+    width: 100svw;
+    padding: 0;
+    margin: 0;
+}
+
+.container-main{
+    display: flex;
+    border: 3px solid black;
+    height: 735px;
+    width: 411.09px;
+}
+
+
+.container-grid{
+    display: grid;
 }
