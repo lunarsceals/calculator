@@ -7,13 +7,21 @@ html, body{
 }
 
 .container-main{
-    display: flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-calculator{
+    display:flex;
+    flex-direction: column;
     border: 3px solid black;
     height: 735px;
     width: 411.09px;
 }
 
+.numpad{
+    display:grid;
+    direction: rtl;
 
-.container-grid{
-    display: grid;
 }
