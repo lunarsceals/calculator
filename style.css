@@ -6,6 +6,7 @@ html, body{
     margin: 0;
 }
 
+
 .container-main{
     display:flex;
     justify-content: center;
@@ -23,5 +24,8 @@ html, body{
 .numpad{
     display:grid;
     direction: rtl;
-
+    
+}
+#input-form{
+    height: 2rem;
 }
