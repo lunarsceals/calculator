@@ -7,13 +7,13 @@ html, body{
 }
 
 
-.container-main{
+main{
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-calculator{
+.calculator-container{
     display:flex;
     flex-direction: column;
     border: 3px solid black;
@@ -21,11 +21,26 @@ html, body{
     width: 411.09px;
 }
 
+#input-form{
+    height: 2rem;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.operations{
+    display: grid;
+    grid-column: 4;
+    grid-row: 4 span;
+}
+
 .numpad{
     display:grid;
     direction: rtl;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 3 span;
+    grid-row: 3 span;
     
-}
-#input-form{
-    height: 2rem;
 }
