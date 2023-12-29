@@ -64,7 +64,10 @@ main{
 }
 
 #input-form{
+    box-sizing: border-box;
+    padding: 10px;
     position:relative;
+    outline:none;
     background-color: #303215;
     border-radius: 15px;
     height: 170px;

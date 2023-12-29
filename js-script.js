@@ -24,11 +24,11 @@ const subtract_btn = document.querySelector(".subtract");
 const multiply_btn = document.querySelector(".multiply");
 const divide_btn = document.querySelector(".divide");
 
-all_clear_btn.onclick = () => {input.val() = ""};
+all_clear_btn.onclick = () => {input.value = ""};
 clear_btn.onclick = () => {clear_input()};
 percentage_btn.onclick = () => {convert_percent()};
 decimal_btn.onclick = () => {add_decimal()}
-result_btn.onclick = () => {input.val() = calculate_result()};
+result_btn.onclick = () => {input.value = calculate_result()};
 
 add_btn.onclick = () => {operation_memory("+")};
 subtract_btn.onclick = () => {operation_memory("-")};
@@ -37,34 +37,34 @@ divide_btn.onclick = () => {operation_memory("/")};
 
 function calculate_result(){
     try{
-        return eval(`${input.val()}`);
+        return eval(`${input.value}`);
     } catch (error){
         return "Error"
     }
 }
 function clear_input(){
-    current_input = input.val();
-    input.val() = current_input.slice(0, -1);
+    current_input = input.value;
+    input.value = current_input.slice(0, -1);
 }
 function enter_input(e){
-    if (input.val() !== "Error"){
-        current_input = input.val();
-        input.val() = current_input + e.target.textContent;
+    if (input.value !== "Error"){
+        current_input = input.value;
+        input.value = current_input + e.target.textContent;
     } else {
-        input.val() = e.target.textContent;
+        input.value = e.target.textContent;
     }
 }
 function operation_memory(operation){
-    current_input = input.val();
-    input.val() = current_input + " " + operation + " ";
+    current_input = input.value;
+    input.value = current_input + " " + operation + " ";
 }
 function convert_percent(){
-     current_input = input.val();
-     input.val() = current_input / 100;
+     current_input = input.value;
+     input.value = current_input / 100;
 }
 function add_decimal(){
-     current_input = input.val();
-     input.val() = current_input + ".";
+     current_input = input.value;
+     input.value = current_input + ".";
 }
 function create_grid(){
     for (i=9; i>0; i--){
