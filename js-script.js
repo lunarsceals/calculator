@@ -55,7 +55,7 @@ function enter_input(e){
 }
 function operation_memory(operation){
     current_input = input.value;
-    input.value = current_input + operation;
+    input.value = current_input + " " + operation + " ";
 }
 function convert_percent(){
      current_input = input.value;
