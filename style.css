@@ -42,5 +42,8 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-column: 3 span;
     grid-row: 3 span;
-    
+}
+
+.calc-btn{
+    height: 3rem;
 }
