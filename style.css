@@ -1,5 +1,5 @@
 html, body{
-    /* background-color: #F28118; */
+    background-color: #F28118;
     height: 100svh;
     width: 100svw;
     padding: 0;
@@ -14,20 +14,28 @@ main{
 }
 
 .calculator-container{
+    box-sizing: border-box;
     background-color: #F28118;
     display:grid;
     justify-content: center;
     grid-template-rows: 1fr 5fr 2fr 5fr;
-    height: 735px;
+    grid-template-columns: 1fr;
+    height: 736px;
     width: 411.09px;
     margin-top: 30px;
 }
 
+.top-container{
+    display: grid;
+    justify-content: center;
+    padding: 10px
+}
+
 .top-decal{
     background-color: #2D231A;
-    height: 41px;
-    border-radius: 14px;
-    margin-top: 10px;
+    height: 35px;
+    border-radius: 12px;
+
 }
 
 .screen-container{
@@ -37,6 +45,7 @@ main{
     border-radius: 20px;
     width: 362.62px;
     height: 300px;
+    margin-top: 10px;
 }
 
 .screen-container:before{
@@ -81,7 +90,9 @@ main{
 .mid-decal{
     display:grid;
     grid-template-columns: repeat(11, 1fr);
-    margin: 10px 0px;
+    margin-top: 10px;
+    height: 5rem;
+
 }
 .mid-decal .left{
     display:grid;
@@ -90,7 +101,7 @@ main{
     grid-column: 6 span;
     grid-row: 2 span;
     height: 70px;
-    margin: 2px 0px 15px 0px;
+    margin: 2px 0px 0px 0px;
 }
 
 .mid-decal .right{
@@ -111,14 +122,27 @@ main{
 
 }
 
-
-
 .grid-container{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    height: 255px;
+    border: 5px solid #975313;
+    border-radius: 14px;
+}
+
+.button-container{
+    box-sizing: border-box;
+    background-color: #D9D9D9;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    height: 271px;
-    width: auto;
+    height: auto;
+    width: 370px;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 6px;
+
 }
 
 .operations{
@@ -133,10 +157,15 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-column: 3 span;
     grid-row: 3 span;
+    gap: inherit;
+    height: 8.2rem;
+    border: 2px solid #8E8C8C;
+    border-radius: 8px;
+    padding: 3px;
 }
 
 .calc-btn{
-    height: 3rem;
+    height: 2.5rem;
 }
 
 #result-btn{

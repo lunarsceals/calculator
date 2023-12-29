@@ -10,36 +10,40 @@
 <body>
     <main>
         <div class="calculator-container">
-            <div class="top-decal"></div>
-            <header class="screen-container">
-                <form>
-                    <textarea id="input-form"></textarea rows = "6" cols=50>
-                </form>
-            </header>
-            <div class=mid-decal>
-                <div class="left"></div>
-                <div class="right">
-                    <div></div>
-                    <div></div>
+            <div class="top-container">
+                <div class="top-decal"></div>
+                <header class="screen-container">
+                    <form>
+                        <textarea id="input-form"></textarea rows = "6" cols=50>
+                    </form>
+                </header>
+                <div class=mid-decal>
+                    <div class="left"></div>
+                    <div class="right">
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
             <div class="grid-container">
-                <button class="all-clear">AC</button>
-                <button class="clear">C</button>
-                <button class="percentage">%</button>
-                
-                <div class="operations">
-                    <button class="divide">÷</button>
-                    <button class="add">+</button>
-                    <button class="subtract">-</button>
-                    <button class="multiply">x</button>
+                <div class="button-container">
+                    <button class="all-clear">AC</button>
+                    <button class="clear">C</button>
+                    <button class="percentage">%</button>
+                    
+                    <div class="operations">
+                        <button class="divide">÷</button>
+                        <button class="add">+</button>
+                        <button class="subtract">-</button>
+                        <button class="multiply">x</button>
+                    </div>
+    
+                    <div class="numpad"></div>
+    
+                    <button class="number">0</button>
+                    <button class="decimal">.</button>
+                    <button class="result" id="result-btn">=</button>
                 </div>
-
-                <div class="numpad"></div>
-
-                <button class="number">0</button>
-                <button class="decimal">.</button>
-                <button class="result" id="result-btn">=</button>
             </div>
         </div>
     </main>
