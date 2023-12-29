@@ -2,6 +2,7 @@
 
 let current_input = "";
 let current_operation = "";
+let button_pressed = true;
 let num1 = 0;
 let num2 = 0;
 
@@ -59,12 +60,12 @@ function operation_memory(operation){
     input.value = current_input + " " + operation + " ";
 }
 function convert_percent(){
-     current_input = input.value;
-     input.value = current_input / 100;
+    current_input = input.value;
+    input.value = current_input / 100;
 }
 function add_decimal(){
-     current_input = input.value;
-     input.value = current_input + ".";
+    current_input = input.value;
+    input.value = current_input + ".";
 }
 function create_grid(){
     for (i=9; i>0; i--){
@@ -86,7 +87,7 @@ function create_decal(){
     for(let i=0; i<16; i++){
         const decal = document.createElement("div");
         decal.classList.add(".left-decal");
-        decal.style.backgroundColor = "#1E1E1E"
+        decal.style.backgroundColor = "#2D231A"
         decal.style.width = "5px"
         decal.style.borderRadius = "5px"
         left_styling.appendChild(decal);
