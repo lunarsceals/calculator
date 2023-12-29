@@ -1,4 +1,3 @@
- 
 
 let current_input = "";
 let current_operation = "";
@@ -43,7 +42,7 @@ function calculate_result(){
         label.textContent = "> " + text;
         return text;
     } catch (error){
-        label.textContent = "> Error";
+        label.textContent = "> Error"
         return "Error"
     }
 }
