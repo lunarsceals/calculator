@@ -1,3 +1,5 @@
+
+
 html, body{
     background-color: #F28118;
     height: 100svh;
@@ -77,12 +79,12 @@ main{
     padding: 10px;
     position:relative;
     outline:none;
-    background-color: #303215;
+    background-color: #352b34;
     border-radius: 15px;
     height: 170px;
     width: 275px;
     border: 0;
-    color: #DCCE4C;
+    color: #d54f31;
     margin-top: 23px;
     z-index: 1;
 }
@@ -128,7 +130,7 @@ main{
     padding: 4px;
     height: 255px;
     border: 5px solid #975313;
-    border-radius: 14px;
+    border-radius: 20px;
 }
 
 .button-container{
@@ -139,9 +141,8 @@ main{
     grid-template-rows: repeat(5, 1fr);
     height: auto;
     width: 370px;
-    padding: 10px;
-    border-radius: 8px;
-    gap: 6px;
+    padding: 8px;
+    border-radius: 12px;
 
 }
 
@@ -157,15 +158,41 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-column: 3 span;
     grid-row: 3 span;
-    gap: inherit;
-    height: 8.2rem;
-    border: 2px solid #8E8C8C;
+    border: 3px solid #8E8C8C;
     border-radius: 8px;
-    padding: 3px;
+    padding-bottom: 3px;
+    margin: 0 2px 0px 0;
+}
+
+.black-btn, 
+.red-btn, 
+.yellow-btn{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.black-btn{
+    background-image: url(./assets/black_button.svg);
+    background-size: 100% 100%;
+    color: #dd7c21c8;
+}
+
+.red-btn{
+    background-image: url(./assets/red_button.svg);
+    background-size: 100% 100%;
+    color: #212121;
+}
+
+.yellow-btn{
+    background-image: url(./assets/yellow_button.svg);
+    color: #2B2B2B;
 }
 
 .calc-btn{
-    height: 2.5rem;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    padding-bottom: 14px;
 }
 
 #result-btn{

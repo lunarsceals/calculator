@@ -70,8 +70,7 @@ function create_grid(){
     for (i=9; i>0; i--){
         const tile = document.createElement("button");
         tile.textContent = i;
-        tile.classList.add("number");
-        tile.classList.add("calc-btn")
+        tile.classList.add("number","calc-btn","black-btn")
         tile.addEventListener("click", enter_input);
         zero_btn.addEventListener("click", enter_input);
         numpad_grid.appendChild(tile);
