@@ -10,13 +10,19 @@
 <body>
     <main>
         <div class="calculator-container">
-            <div class="decal"></div>
+            <div class="top-decal"></div>
             <header class="screen-container">
                 <form>
-                    <input id="input-form">
+                    <textarea id="input-form"></textarea rows = "6" cols=50>
                 </form>
             </header>
-            <div class=decal></div>
+            <div class=mid-decal>
+                <div class="left"></div>
+                <div class="right">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
             <div class="grid-container">
                 <button class="all-clear">AC</button>
                 <button class="clear">C</button>
@@ -33,7 +39,7 @@
 
                 <button class="number">0</button>
                 <button class="decimal">.</button>
-                <button class="result">=</button>
+                <button class="result" id="result-btn">=</button>
             </div>
         </div>
     </main>
