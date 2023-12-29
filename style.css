@@ -75,19 +75,25 @@ main{
 }
 
 #input-form{
+    font-family: 'VT323', monospace;
+    font-size: 20px;
     box-sizing: border-box;
     padding: 10px;
     position:relative;
     outline:none;
     background-color: #352b34;
     border-radius: 15px;
-    height: 170px;
-    width: 275px;
+    min-height: 170px;
+    min-width: 275px;
+    max-height: 170px;
+    max-width: 275px;
     border: 0;
     color: #d54f31;
     margin-top: 23px;
     z-index: 1;
 }
+
+
 
 .mid-decal{
     display:grid;
@@ -169,7 +175,10 @@ main{
 .yellow-btn{
     font-weight: bold;
     font-size: 12px;
+    font-family: 'Kanit', sans-serif;
 }
+
+
 
 .black-btn{
     background-image: url(./assets/black_button.svg);
