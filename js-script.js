@@ -13,6 +13,7 @@ const left_styling = document.querySelector(".left");
 const numpad_grid = document.querySelector(".numpad");
 const calc_btns = document.querySelectorAll("button");
 const input = document.querySelector("#input-form");
+const label = document.querySelector(".label");
 
 const all_clear_btn = document.querySelector(".all-clear");
 const clear_btn = document.querySelector(".clear");
@@ -25,7 +26,7 @@ const subtract_btn = document.querySelector(".subtract");
 const multiply_btn = document.querySelector(".multiply");
 const divide_btn = document.querySelector(".divide");
 
-all_clear_btn.onclick = () => {input.value = ""};
+all_clear_btn.onclick = () => {input.value = ""; label.textContent = ">";};
 clear_btn.onclick = () => {clear_input()};
 percentage_btn.onclick = () => {convert_percent()};
 decimal_btn.onclick = () => {add_decimal()}
@@ -38,34 +39,49 @@ divide_btn.onclick = () => {operation_memory("/")};
 
 function calculate_result(){
     try{
-        return eval(`${input.value}`);
+        let text = eval(`${input.value}`);
+        label.textContent = "> " + text;
+        return text;
     } catch (error){
+        label.textContent = "> Error";
         return "Error"
     }
 }
 function clear_input(){
     current_input = input.value;
-    input.value = current_input.slice(0, -1);
+    let text = current_input.slice(0, -1);
+    input.value = text;
+    label.textContent = "> " + text;
 }
 function enter_input(e){
     if (input.value !== "Error"){
         current_input = input.value;
-        input.value = current_input + e.target.textContent;
+        let text = current_input + e.target.textContent;
+        input.value = text;
+        label.textContent = "> " + text; 
     } else {
+        label.textContent = "> " + e.target.textContent
         input.value = e.target.textContent;
     }
 }
 function operation_memory(operation){
     current_input = input.value;
-    input.value = current_input + " " + operation + " ";
+    let text = current_input + " " + operation + " ";
+    input.value = text;
+    label.textContent = "> " + text;
 }
 function convert_percent(){
     current_input = input.value;
-    input.value = current_input / 100;
+    let text = current_input / 100;
+    input.value = text;
+    label.textContent = "> " + text;
+
 }
 function add_decimal(){
     current_input = input.value;
-    input.value = current_input + ".";
+    let text = current_input + ".";
+    input.value = text;
+    label.textContent = "> " + text;
 }
 function create_grid(){
     for (i=9; i>0; i--){
