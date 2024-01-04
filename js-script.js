@@ -37,8 +37,17 @@ multiply_btn.onclick = () => {operation_memory("*")};
 divide_btn.onclick = () => {operation_memory("/")};
 
 function calculate_result(){
+
+    let splitArr = input.value.replace(/\s+/g, '').split("");
+    operation = splitArr[1];
+    num1 = splitArr[0];
+    num2 = splitArr[2];
+    if (parseInt(num2) === 0){
+        return "Cannot Divide By Zero"
+    };
     try{
-        let text = eval(`${input.value}`);
+        
+        let text = eval(`${num1}${operation}${num2}`);
         label.textContent = "> " + text;
         return text;
     } catch (error){
